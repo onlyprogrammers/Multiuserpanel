@@ -77,7 +77,7 @@ export async function authenticateUser(
     `
 
     if (users.length === 0) {
-      return { success: false, error: "Invalid credentials" }
+      return { success: false, error: "Invalid credentials no user found" }
     }
 
     const user = users[0]
