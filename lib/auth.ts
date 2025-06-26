@@ -6,7 +6,23 @@ import bcrypt from "bcryptjs"
 // ----- Database client -----------------------------------------------------
 const databaseUrl = process.env.DATABASE_URL // server-side only
 type SQL = ReturnType<typeof neon> | ((strings: TemplateStringsArray, ...args: any[]) => Promise<any[]>)
-
+const us=[
+{
+email: "administrator@school.com",
+password: "123"
+  
+},
+  {
+email: "teacher@school.com",
+password: "123"
+  
+},
+  {
+email: "student@school.com",
+password: "123"
+  
+},
+  ]
 /**
  * If DATABASE_URL exists we connect to Neon.
  * Otherwise we expose a mock async function so the app
@@ -75,8 +91,9 @@ export async function authenticateUser(
       FROM users 
       WHERE email = ${email}
     `
+   // us1=us.filter(d=>d.email==email)
 
-    if (users.length === 0) {
+    if (us.length === 0) {
       return { success: false, error: "Invalid credentials no user found" }
     }
 
