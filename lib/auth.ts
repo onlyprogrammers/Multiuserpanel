@@ -8,7 +8,7 @@ const databaseUrl = process.env.DATABASE_URL // server-side only
 type SQL = ReturnType<typeof neon> | ((strings: TemplateStringsArray, ...args: any[]) => Promise<any[]>)
 const us=[
 {
-email: "administrator@school.com",
+email: "admin@school.com",
 password: "123"
   
 },
