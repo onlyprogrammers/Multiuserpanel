@@ -9,7 +9,9 @@ type SQL = ReturnType<typeof neon> | ((strings: TemplateStringsArray, ...args: a
 const us=[
 {
 email: "admin@school.com",
-password: "123"
+password: "123",
+role: "administrator",
+name: "ak"
   
 },
   {
